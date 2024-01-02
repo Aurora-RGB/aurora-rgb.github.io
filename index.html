@@ -46,240 +46,241 @@
     <meta name="google-site-verification" content="avmRsumfXhE_k-pT4-zNet3t0kEXgf9eypg__t3jBQM" />
 </head>
 
-<body bgcolor="#000000" text="#FFFFFF" style="margin:0px;">
+<body style="margin:0px;">
     <div id="includedContent" style="height: 190px"></div>
     <div class="contentbox" align="center" style="width: 100%; height: 100%; ">
         <div class="content">
             <h1>Aurora Demo Preview</h1>
-            <p>
-                <div style="display:inline-block;width:600px;height:342px;">
-                    <div class="logikey keyboard" style="position:absolute;">
-                        <img src="images/logi.png" style="z-index: 1;width: 600px;position: absolute;" />
-                        <video height="170" width="560" id="b" style="padding: 59px 20px 131px;position: absolute;"
-                            muted>
-                            <source src="videos/overwatch_demo_logitech.mp4">
-                        </video>
-                    </div>
-                    <div class="razrkey keyboard" style="opacity:0;position:absolute;">
-                        <img src="images/keyboardr.png" style="z-index: 1;width: 600px;position: absolute;" />
-                        <video id="c" style="padding: 74px 26px 137px 29px;position: absolute;" muted="" height="150"
-                            width="545">
-                            <source src="videos/overwatch_demo_razer.mp4">
-                        </video>
-                    </div>
+            <div style="display:inline-block;width:600px;height:342px;">
+                <div class="logikey keyboard" style="position:absolute;">
+                    <img src="images/logi.png" style="z-index: 1;width: 600px;position: absolute;"/>
+                    <video height="170" width="560" id="b" style="padding: 59px 20px 131px;position: absolute;"
+                           muted>
+                        <source src="videos/overwatch_demo_logitech.mp4">
+                    </video>
                 </div>
-                <video height="340" width="600" id="a" style="padding-left: 20px;" controls loop>
-                    <source src="videos/overwatch_demo_gameplay.mp4">
-                </video>
-                <br />
-                <div style="height: 100%;font-family:arial;width: 75%;background-color: rgba(0, 0, 0, 0.7);margin-top: 20px;padding-top: 20px;">
-                    Click a brand to switch the keyboard:<br /><br />
-                    <img class="buttonkeylogitech keyboard-switch" src="images/ltech.png"  alt="Razer switch"/>
-                    <img class="buttonkeyrazer keyboard-switch" src="images/rzr.png"  alt="Logitech switch"/>
-                    <br />
-                    <br />
-                    Click a game icon to switch demo video:<br /><br />
-                    <img class="buttonkeygameicon" id="dota2_btn" src="images/logos/games/dota2.png"
-                        alt="Dota 2 Logo" style="width:64px; height:64px" />
-                    <img class="buttonkeygameicon" id="gta5_btn" src="images/logos/games/gta5.png"
-                        alt="GTA 5 Logo" style="width:64px; height:64px" />
-                    <img class="buttonkeygameicon" id="rocketleague_btn" src="images/logos/games/rocketleague.png"
-                        alt="Rocket League Logo" style="width:64px; height:64px" />
-                    <img class="buttonkeygameicon" id="overwatch_btn" src="images/logos/games/overwatch.png"
-                        alt="Overwatch Logo" style="width:64px; height:64px" />
-                    <img class="buttonkeygameicon" id="dodgeball_btn" src="images/logos/games/disco_dodgeball.png"
-                        alt="Disco Dodgeball Logo" style="width:64px; height:64px" />
+                <div class="razrkey keyboard" style="opacity:0;position:absolute;">
+                    <img src="images/keyboardr.png" style="z-index: 1;width: 600px;position: absolute;"/>
+                    <video id="c" style="padding: 74px 26px 137px 29px;position: absolute;" muted="" height="150"
+                           width="545">
+                        <source src="videos/overwatch_demo_razer.mp4">
+                    </video>
+                </div>
+            </div>
+            <video height="340" width="600" id="a" style="padding-left: 20px;" controls loop>
+                <source src="videos/overwatch_demo_gameplay.mp4">
+            </video>
+            <br/>
+            <div style="height: 100%;font-family:arial;width: 75%;background-color: rgba(0, 0, 0, 0.7);margin-top: 20px;padding-top: 20px;">
+                Click a brand to switch the keyboard:<br/><br/>
+                <img class="buttonkeylogitech keyboard-switch" src="images/ltech.png" alt="Razer switch"/>
+                <img class="buttonkeyrazer keyboard-switch" src="images/rzr.png" alt="Logitech switch"/>
+                <br/>
+                <br/>
+                Click a game icon to switch demo video:<br/><br/>
+                <img class="buttonkeygameicon" id="dota2_btn" src="images/logos/games/dota2.png"
+                     alt="Dota 2 Logo" style="width:64px; height:64px"/>
+                <img class="buttonkeygameicon" id="gta5_btn" src="images/logos/games/gta5.png"
+                     alt="GTA 5 Logo" style="width:64px; height:64px"/>
+                <img class="buttonkeygameicon" id="rocketleague_btn" src="images/logos/games/rocketleague.png"
+                     alt="Rocket League Logo" style="width:64px; height:64px"/>
+                <img class="buttonkeygameicon" id="overwatch_btn" src="images/logos/games/overwatch.png"
+                     alt="Overwatch Logo" style="width:64px; height:64px"/>
+                <img class="buttonkeygameicon" id="dodgeball_btn" src="images/logos/games/disco_dodgeball.png"
+                     alt="Disco Dodgeball Logo" style="width:64px; height:64px"/>
 
-                    <script>
-                          function fadeIn(element) {
-                            element.style.opacity = 1;
-                          }
-                          function fadeOut(element) {
-                            element.style.opacity = 0;
-                          }
+                <script>
+                  function fadeIn(element) {
+                    element.style.opacity = 1;
+                  }
 
-                          document.addEventListener("DOMContentLoaded", function() {
-                            let buttonKeyRazer = document.querySelector("img.buttonkeyrazer");
-                            if (buttonKeyRazer) {
-                              buttonKeyRazer.addEventListener("click", function () {
-                                var logitech = document.querySelector("div.logikey");
-                                var razer = document.querySelector("div.razrkey");
-                                if (razer.style.display !== "block") {
-                                  fadeIn(razer);
-                                  fadeOut(logitech);
+                  function fadeOut(element) {
+                    element.style.opacity = 0;
+                  }
+
+                  document.addEventListener("DOMContentLoaded", function () {
+                    let buttonKeyRazer = document.querySelector("img.buttonkeyrazer");
+                    if (buttonKeyRazer) {
+                      buttonKeyRazer.addEventListener("click", function () {
+                        var logitech = document.querySelector("div.logikey");
+                        var razer = document.querySelector("div.razrkey");
+                        if (razer.style.display !== "block") {
+                          fadeIn(razer);
+                          fadeOut(logitech);
+                        }
+                      });
+                    }
+
+                    let buttonKeyLogitech = document.querySelector("img.buttonkeylogitech");
+                    if (buttonKeyLogitech) {
+                      buttonKeyLogitech.addEventListener("click", function () {
+                        var logitech = document.querySelector("div.logikey");
+                        var razer = document.querySelector("div.razrkey");
+                        if (logitech.style.display !== "block") {
+                          fadeIn(logitech);
+                          fadeOut(razer);
+                        }
+                      });
+                    }
+
+                    var videos = {
+                        a: Popcorn("#a"),
+                        b: Popcorn("#b"),
+                        c: Popcorn("#c"),
+                      },
+                      loadCount = 0,
+                      events = "play pause timeupdate seeking".split(/\s+/g);
+
+                    // iterate both media sources
+                    Popcorn.forEach(videos, function (media, type) {
+
+                      // when each is ready...
+                      media.on("canplayall", function () {
+
+                        // trigger a custom "sync" event
+                        this.emit("sync");
+                        // Listen for the custom sync event...
+                      }).on("sync", function () {
+
+                        // Once both items are loaded, sync events
+                        if (++loadCount == 3) {
+
+                          // Iterate all events and trigger them on the video B
+                          // whenever they occur on the video A
+                          events.forEach(function (event) {
+
+                            videos.a.on(event, function () {
+
+                              // Avoid overkill events, trigger timeupdate manually
+                              if (event === "timeupdate") {
+
+                                if (!this.media.paused) {
+                                  return;
                                 }
-                              });
-                            }
+                                videos.b.emit("timeupdate");
+                                videos.c.emit("timeupdate");
 
-                            let buttonKeyLogitech = document.querySelector("img.buttonkeylogitech");
-                            if (buttonKeyLogitech) {
-                              buttonKeyLogitech.addEventListener("click", function () {
-                                var logitech =document.querySelector("div.logikey");
-                                var razer = document.querySelector("div.razrkey");
-                                if (logitech.style.display !== "block") {
-                                  fadeIn(logitech);
-                                  fadeOut(razer);
-                                }
-                              });
-                            }
+                                return;
+                              }
 
-                            var videos = {
-                                a: Popcorn("#a"),
-                                b: Popcorn("#b"),
-                                c: Popcorn("#c"),
-                              },
-                            loadCount = 0,
-                            events = "play pause timeupdate seeking".split(/\s+/g);
+                              if (event === "seeking") {
+                                videos.b.currentTime(this.currentTime());
+                                videos.c.currentTime(this.currentTime());
+                              }
 
-                            // iterate both media sources
-                            Popcorn.forEach(videos, function (media, type) {
-
-                              // when each is ready...
-                              media.on("canplayall", function () {
-
-                                // trigger a custom "sync" event
-                                this.emit("sync");
-                                // Listen for the custom sync event...
-                              }).on("sync", function () {
-
-                                // Once both items are loaded, sync events
-                                if (++loadCount == 3) {
-
-                                  // Iterate all events and trigger them on the video B
-                                  // whenever they occur on the video A
-                                  events.forEach(function (event) {
-
-                                    videos.a.on(event, function () {
-
-                                      // Avoid overkill events, trigger timeupdate manually
-                                      if (event === "timeupdate") {
-
-                                        if (!this.media.paused) {
-                                          return;
-                                        }
-                                        videos.b.emit("timeupdate");
-                                        videos.c.emit("timeupdate");
-
-                                        return;
-                                      }
-
-                                      if (event === "seeking") {
-                                        videos.b.currentTime(this.currentTime());
-                                        videos.c.currentTime(this.currentTime());
-                                      }
-
-                                      if (event === "play" || event === "pause") {
-                                        videos.b[event]();
-                                        videos.c[event]();
-                                      }
-                                    });
-                                  });
-                                }
-                              });
+                              if (event === "play" || event === "pause") {
+                                videos.b[event]();
+                                videos.c[event]();
+                              }
                             });
+                          });
+                        }
+                      });
+                    });
 
-                            // With requestAnimationFrame, we can ensure that as
-                            // frequently as the browser would allow,
-                            // the video is resync'ed.
-                            function sync() {
-                              if (videos.b.media.readyState === 4) {
-                                videos.b.currentTime(
-                                  videos.a.currentTime()
-                                );
-                              }
-                              if (videos.c.media.readyState === 4) {
-                                videos.c.currentTime(
-                                  videos.a.currentTime()
-                                );
-                              }
-                              requestAnimationFrame(sync);
+                    // With requestAnimationFrame, we can ensure that as
+                    // frequently as the browser would allow,
+                    // the video is resync'ed.
+                    function sync() {
+                      if (videos.b.media.readyState === 4) {
+                        videos.b.currentTime(
+                          videos.a.currentTime()
+                        );
+                      }
+                      if (videos.c.media.readyState === 4) {
+                        videos.c.currentTime(
+                          videos.a.currentTime()
+                        );
+                      }
+                      requestAnimationFrame(sync);
+                    }
+
+                    sync();
+
+                    var gameplayVid = document.getElementById("a");
+                    var logiVid = document.getElementById("b");
+                    var razerVid = document.getElementById("c");
+
+                    var currentSelection = "";
+
+                    [].forEach.call(document.getElementsByClassName('buttonkeygameicon'), function (btn) {
+                      btn.addEventListener('click', function (e) {
+
+                        switch (e.target.id) {
+                          case "overwatch_btn":
+                            if (currentSelection !== "overwatch_btn") {
+                              gameplayVid.src = "videos/overwatch_demo_gameplay.mp4";
+                              logiVid.src = "videos/overwatch_demo_logitech.mp4";
+                              razerVid.src = "videos/overwatch_demo_razer.mp4";
+
+                              currentSelection = "overwatch_btn";
+                              gameplayVid.play();
                             }
+                            break;
+                          case "rocketleague_btn":
+                            if (currentSelection !== "rocketleague_btn") {
+                              gameplayVid.src = "videos/Aurora_RocketLeague_website_gameplay_cut_2.mp4";
+                              logiVid.src = "videos/Aurora_RocketLeague_website_logitech_cut_2.mp4";
+                              razerVid.src = "videos/Aurora_RocketLeague_website_razer_cut_3.mp4";
 
-                            sync();
+                              currentSelection = "rocketleague_btn";
+                              gameplayVid.play();
+                            }
+                            break;
+                          case "gta5_btn":
+                            if (currentSelection !== "gta5_btn") {
+                              gameplayVid.src = "videos/Aurora_GTA5_website_gameplay_cut.mp4";
+                              logiVid.src = "videos/Aurora_GTA5_website_logitech_cut.mp4";
+                              razerVid.src = "videos/Aurora_GTA5_website_razer_cut.mp4";
 
-                            var gameplayVid = document.getElementById("a");
-                            var logiVid = document.getElementById("b");
-                            var razerVid = document.getElementById("c");
+                              currentSelection = "gta5_btn";
+                              gameplayVid.play();
+                            }
+                            break;
+                          case "dota2_btn":
+                            if (currentSelection !== "dota2_btn") {
+                              gameplayVid.src = "videos/Aurora_Dota2_website_gameplay_cut.mp4";
+                              logiVid.src = "videos/Aurora_Dota2_website_logitech_cut.mp4";
+                              razerVid.src = "videos/Aurora_Dota2_website_razer_cut.mp4";
 
-                            var currentSelection = "";
+                              currentSelection = "dota2_btn";
+                              gameplayVid.play();
+                            }
+                            break;
+                          case "dodgeball_btn":
+                            if (currentSelection !== "dodgeball_btn") {
+                              gameplayVid.src = "videos/dodgeball_demo_gameplay.mp4";
+                              logiVid.src = "videos/dodgeball_demo_logitech.mp4";
+                              razerVid.src = "videos/dodgeball_demo_razer.mp4";
 
-                            [].forEach.call(document.getElementsByClassName('buttonkeygameicon'), function (btn) {
-                              btn.addEventListener('click', function (e) {
+                              currentSelection = "dodgeball_btn";
+                              gameplayVid.play();
+                            }
+                            break;
+                          default:
+                            console.log("unknown target: ", e.target.id);
+                        }
+                      })
+                    })
 
-                                switch (e.target.id) {
-                                  case "overwatch_btn":
-                                    if (currentSelection !== "overwatch_btn") {
-                                      gameplayVid.src = "videos/overwatch_demo_gameplay.mp4";
-                                      logiVid.src = "videos/overwatch_demo_logitech.mp4";
-                                      razerVid.src = "videos/overwatch_demo_razer.mp4";
-
-                                      currentSelection = "overwatch_btn";
-                                      gameplayVid.play();
-                                    }
-                                    break;
-                                  case "rocketleague_btn":
-                                    if (currentSelection !== "rocketleague_btn") {
-                                      gameplayVid.src = "videos/Aurora_RocketLeague_website_gameplay_cut_2.mp4";
-                                      logiVid.src = "videos/Aurora_RocketLeague_website_logitech_cut_2.mp4";
-                                      razerVid.src = "videos/Aurora_RocketLeague_website_razer_cut_3.mp4";
-
-                                      currentSelection = "rocketleague_btn";
-                                      gameplayVid.play();
-                                    }
-                                    break;
-                                  case "gta5_btn":
-                                    if (currentSelection !== "gta5_btn") {
-                                      gameplayVid.src = "videos/Aurora_GTA5_website_gameplay_cut.mp4";
-                                      logiVid.src = "videos/Aurora_GTA5_website_logitech_cut.mp4";
-                                      razerVid.src = "videos/Aurora_GTA5_website_razer_cut.mp4";
-
-                                      currentSelection = "gta5_btn";
-                                      gameplayVid.play();
-                                    }
-                                    break;
-                                  case "dota2_btn":
-                                    if (currentSelection !== "dota2_btn") {
-                                      gameplayVid.src = "videos/Aurora_Dota2_website_gameplay_cut.mp4";
-                                      logiVid.src = "videos/Aurora_Dota2_website_logitech_cut.mp4";
-                                      razerVid.src = "videos/Aurora_Dota2_website_razer_cut.mp4";
-
-                                      currentSelection = "dota2_btn";
-                                      gameplayVid.play();
-                                    }
-                                    break;
-                                  case "dodgeball_btn":
-                                    if (currentSelection !== "dodgeball_btn") {
-                                      gameplayVid.src = "videos/dodgeball_demo_gameplay.mp4";
-                                      logiVid.src = "videos/dodgeball_demo_logitech.mp4";
-                                      razerVid.src = "videos/dodgeball_demo_razer.mp4";
-
-                                      currentSelection = "dodgeball_btn";
-                                      gameplayVid.play();
-                                    }
-                                    break;
-                                  default:
-                                    console.log("unknown target: ", e.target.id);
-                                }
-                              })
-                            })
-
-                          })
-                    </script>
-                </div>
-            </p>
-            <hr style="width:70%;" />
+                  })
+                </script>
+            </div>
+            <hr style="width:70%;"/>
             <h1>Natively Supported Games</h1>
             <p style="height: 100%;width: 75%">
-                <a href="/Docs/basic-topics/games/">All Supported Games,</a> including CS2, Dota 2 and League of Legends.
+                <a href="/Docs/basic-topics/games/">All Supported Games,</a> including CS2, Dota 2 and League of
+                Legends.
             </p>
 
-            <hr style="width:70%;" />
+            <hr style="width:70%;"/>
             <h1>Natively Supported Brands</h1>
             <p style="height: 100%;width: 75%">
-                Works with <a href="/Docs/devices/alldevices/">All Supported Brands,</a> including Logitech, Razer and Corsair.
+                Works with <a href="/Docs/devices/alldevices/">All Supported Brands,</a> including Logitech, Razer and
+                Corsair.
             </p>
 
-            <hr style="width:70%;" />
+            <hr style="width:70%;"/>
             <h1>Screenshots</h1>
             <div class="slideshow-container box-size">
 
@@ -369,49 +370,49 @@
                 <span class="dot dot0" onclick="currentSlide(0, 11)"></span>
             </div>
 
-            <hr style="width:70%;" />
+            <hr style="width:70%;"/>
             <h1>Video Demos</h1>
             <div class="slideshow-container box-size">
 
                 <div class="mySlides1 fade">
                     <div class="numbertext">1 / 6</div>
                     <iframe width="100%" height="500"
-                    src="https://www.youtube.com/embed/irBmmA_ndPY">
+                            src="https://www.youtube.com/embed/irBmmA_ndPY">
                     </iframe>
                 </div>
 
                 <div class="mySlides1 fade">
                     <div class="numbertext">2 / 6</div>
                     <iframe width="100%" height="500"
-                    src="https://www.youtube.com/embed/YMk0NwrLMF4">
+                            src="https://www.youtube.com/embed/YMk0NwrLMF4">
                     </iframe>
                 </div>
 
                 <div class="mySlides1 fade">
                     <div class="numbertext">3 / 6</div>
                     <iframe width="100%" height="500"
-                    src="https://www.youtube.com/embed/iqwYU-blkhk">
+                            src="https://www.youtube.com/embed/iqwYU-blkhk">
                     </iframe>
                 </div>
 
                 <div class="mySlides1 fade">
                     <div class="numbertext">4 / 6</div>
                     <iframe width="100%" height="500"
-                    src="https://www.youtube.com/embed/8Y2hvVDQTxI">
+                            src="https://www.youtube.com/embed/8Y2hvVDQTxI">
                     </iframe>
                 </div>
 
                 <div class="mySlides1 fade">
                     <div class="numbertext">5 / 6</div>
                     <iframe width="100%" height="500"
-                    src="https://www.youtube.com/embed/pxx3hqoPFD8">
+                            src="https://www.youtube.com/embed/pxx3hqoPFD8">
                     </iframe>
                 </div>
 
                 <div class="mySlides1 fade">
                     <div class="numbertext">6 / 6</div>
                     <iframe width="100%" height="500"
-                    src="https://www.youtube.com/embed/XhXQt0LU520">
+                            src="https://www.youtube.com/embed/XhXQt0LU520">
                     </iframe>
                 </div>
 
@@ -430,209 +431,213 @@
                 <span class="dot dot1" onclick="currentSlide(1, 6)"></span>
             </div>
             <script>
-                var slideIndex = [1,1];
-                showSlides(0, slideIndex[0]);
-                showSlides(1, slideIndex[1]);
+              var slideIndex = [1, 1];
+              showSlides(0, slideIndex[0]);
+              showSlides(1, slideIndex[1]);
 
-                function plusSlides(i, n) {
-                    showSlides(i, slideIndex[i] += n);
-                }
+              function plusSlides(i, n) {
+                showSlides(i, slideIndex[i] += n);
+              }
 
-                function currentSlide(i, n) {
-                    showSlides(i, slideIndex[i] = n);
-                }
+              function currentSlide(i, n) {
+                showSlides(i, slideIndex[i] = n);
+              }
 
-                function showSlides(id, n) {
-                    var i;
-                    var slides = document.getElementsByClassName("mySlides" + id + "");
-                    var dots = document.getElementsByClassName("dot" + id);
-                    if (n > slides.length) { slideIndex[id] = 1 }
-                    if (n < 1) { slideIndex[id] = slides.length }
-                    for (i = 0; i < slides.length; i++) {
-                        slides[i].style.display = "none";
-                    }
-                    for (i = 0; i < dots.length; i++) {
-                        dots[i].className = dots[i].className.replace(" active", "");
-                    }
-                    slides[slideIndex[id] - 1].style.display = "block";
-                    dots[slideIndex[id] - 1].className += " active";
+              function showSlides(id, n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides" + id + "");
+                var dots = document.getElementsByClassName("dot" + id);
+                if (n > slides.length) {
+                  slideIndex[id] = 1
                 }
+                if (n < 1) {
+                  slideIndex[id] = slides.length
+                }
+                for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex[id] - 1].style.display = "block";
+                dots[slideIndex[id] - 1].className += " active";
+              }
             </script>
 
 
-            <hr style="width:70%;" />
+            <hr style="width:70%;"/>
             <main>
                 <h1>Features</h1>
                 <p class="auto-style1">
-                    <strong>General</strong><br />
-                    • Display volume percentage on the keyboard<br />
-                    • Display CPU and Memory usage on the keyboard<br />
-                    • Layering system for effects<br />
-                    • Define custom layers with individual effects<br />
-                    • Key selection via freeform region<br />
-                    • Customizable “away from keyboard” effects<br />
-                    • Set global peripheral brightness on the fly without having to leave your game<br />
-                    • Completely turn off peripheral lights after a specific time<br />
-                    • Interactive keyboard effects such as: Key Fade, Key Wave, and Arrow Flow<br />
-                    • Preview lighting effects without having to launch the game<br />
-                    • Simultaneous support for different brands of RGB peripheral devices<br />
-                    • Support for a wide range of models from all the top brands of RGB peripherals<br />
-                    • Support for almost any Logitech LED and Razer Chroma supported games<br />
-                    • Add other programs to define custom lighting layers for daytime and nighttime themes<br />
-                    • Display shortcut keys with Shortcuts Assistant<br />
-                    • Automatic updater<br />
-                    • Ability to select your preferred keyboard layout and brand<br />
-                    • Ability to select your mouse, and it's orientation (left/right handed)<br />
-                    • Import/Export for profile settings<br />
-                    • Customizable gradient layers<br />
-                    • Scripting support for custom lighting effects & custom devices<br />
+                    <strong>General</strong><br/>
+                    • Display volume percentage on the keyboard<br/>
+                    • Display CPU and Memory usage on the keyboard<br/>
+                    • Layering system for effects<br/>
+                    • Define custom layers with individual effects<br/>
+                    • Key selection via freeform region<br/>
+                    • Customizable “away from keyboard” effects<br/>
+                    • Set global peripheral brightness on the fly without having to leave your game<br/>
+                    • Completely turn off peripheral lights after a specific time<br/>
+                    • Interactive keyboard effects such as: Key Fade, Key Wave, and Arrow Flow<br/>
+                    • Preview lighting effects without having to launch the game<br/>
+                    • Simultaneous support for different brands of RGB peripheral devices<br/>
+                    • Support for a wide range of models from all the top brands of RGB peripherals<br/>
+                    • Support for almost any Logitech LED and Razer Chroma supported games<br/>
+                    • Add other programs to define custom lighting layers for daytime and nighttime themes<br/>
+                    • Display shortcut keys with Shortcuts Assistant<br/>
+                    • Automatic updater<br/>
+                    • Ability to select your preferred keyboard layout and brand<br/>
+                    • Ability to select your mouse, and it's orientation (left/right handed)<br/>
+                    • Import/Export for profile settings<br/>
+                    • Customizable gradient layers<br/>
+                    • Scripting support for custom lighting effects & custom devices<br/>
 
-                    <br /><br /><strong>Battlefield 1 features</strong><br />
-                    • Flashes red when the player takes damage.<br />
-                    • Lights up keybindings.<br />
+                    <br/><br/><strong>Battlefield 1 features</strong><br/>
+                    • Flashes red when the player takes damage.<br/>
+                    • Lights up keybindings.<br/>
 
-                    <br /><br /><strong>Borderlands 2 features</strong><br />
-                    • Health and Shield indicators<br />
+                    <br/><br/><strong>Borderlands 2 features</strong><br/>
+                    • Health and Shield indicators<br/>
 
-                    <br /><br /><strong>Clone Hero features</strong><br />
-                    • Note Streak Indicator <br />
-                    • Star Power Percentage Indicator <br />
-                    • Note Hit Animation <br />
-                    • Fret Press Indicator <br />
-                    • Star Power Activation Indicator & Color Overrides<br />
-                    • FC Indicator<br />
-                    • Menu Effects<br />
-                    • Flashes red when a player misses a note or overstrums<br />
+                    <br/><br/><strong>Clone Hero features</strong><br/>
+                    • Note Streak Indicator <br/>
+                    • Star Power Percentage Indicator <br/>
+                    • Note Hit Animation <br/>
+                    • Fret Press Indicator <br/>
+                    • Star Power Activation Indicator & Color Overrides<br/>
+                    • FC Indicator<br/>
+                    • Menu Effects<br/>
+                    • Flashes red when a player misses a note or overstrums<br/>
 
-                    <br /><br /><strong>CS:GO features</strong><br />
-                    • Team-based background lighting<br />
-                    • Health and Ammo indicators<br />
-                    • Bomb effect<br />
-                    • Kill indicators<br />
-                    • Burning and Flashbang effects<br />
-                    • Chat/Console typing keys<br />
+                    <br/><br/><strong>CS:GO features</strong><br/>
+                    • Team-based background lighting<br/>
+                    • Health and Ammo indicators<br/>
+                    • Bomb effect<br/>
+                    • Kill indicators<br/>
+                    • Burning and Flashbang effects<br/>
+                    • Chat/Console typing keys<br/>
 
-                    <br /><br /><strong>DOOM features</strong><br />
-                    • Animation on kills and glory kills<br />
-                    • Animation on item pickups<br />
+                    <br/><br/><strong>DOOM features</strong><br/>
+                    • Animation on kills and glory kills<br/>
+                    • Animation on item pickups<br/>
 
-                    <br /><br /><strong>Diablo III features</strong><br />
-                    • Ability cooldowns<br />
-                    • Health and damage indicators<br />
-                    • Legendary item pickup animations<br />
+                    <br/><br/><strong>Diablo III features</strong><br/>
+                    • Ability cooldowns<br/>
+                    • Health and damage indicators<br/>
+                    • Legendary item pickup animations<br/>
 
-                    <br /><br /><strong>Dishonored features</strong><br />
-                    • Health and Mana indicators.<br />
-                    • Potion indicators.<br />
+                    <br/><br/><strong>Dishonored features</strong><br/>
+                    • Health and Mana indicators.<br/>
+                    • Potion indicators.<br/>
 
-                    <br /><br /><strong>Dota 2 features</strong><br />
-                    • Team-based background lighting<br />
-                    • Respawn effect<br />
-                    • Killstreak effect<br />
-                    • Health and Mana indicators<br />
-                    • Ability and Item indicators<br />
-                    • Hero ability effects<br />
+                    <br/><br/><strong>Dota 2 features</strong><br/>
+                    • Team-based background lighting<br/>
+                    • Respawn effect<br/>
+                    • Killstreak effect<br/>
+                    • Health and Mana indicators<br/>
+                    • Ability and Item indicators<br/>
+                    • Hero ability effects<br/>
 
-                    <br /><br /><strong>Dying Light features</strong><br />
-                    • Background lighting changes according to time of day, health, and flashlight<br />
-                    • All keybindings with a color for each category<br />
+                    <br/><br/><strong>Dying Light features</strong><br/>
+                    • Background lighting changes according to time of day, health, and flashlight<br/>
+                    • All keybindings with a color for each category<br/>
 
-                    <br /><br /><strong>Euro Truck Simulator 2 / American Truck Simulator features</strong><br />
-                    • Throttle/braking indicators<br />
-                    • RPM meter<br />
-                    • Blinkers<br />
-                    • Beacons<br />
-                    • Fuel/air pressure indicators<br />
-                    • Ignition indicator<br />
+                    <br/><br/><strong>Euro Truck Simulator 2 / American Truck Simulator features</strong><br/>
+                    • Throttle/braking indicators<br/>
+                    • RPM meter<br/>
+                    • Blinkers<br/>
+                    • Beacons<br/>
+                    • Fuel/air pressure indicators<br/>
+                    • Ignition indicator<br/>
 
-                    <br /><br /><strong>Factorio features</strong><br />
-                    • Loading bar on startup<br />
-                    • Health indicator<br />
-                    • Research done alerts<br />
+                    <br/><br/><strong>Factorio features</strong><br/>
+                    • Loading bar on startup<br/>
+                    • Health indicator<br/>
+                    • Research done alerts<br/>
 
-                    <br /><br /><strong>Grand Theft Auto V features</strong><br />
-                    • Dynamic background lighting (based on current character or race position)<br />
-                    • Custom police siren effects<br />
+                    <br/><br/><strong>Grand Theft Auto V features</strong><br/>
+                    • Dynamic background lighting (based on current character or race position)<br/>
+                    • Custom police siren effects<br/>
 
-                    <br /><br /><strong>Hotline Miami features</strong><br />
-                    • Hotline Miami has a slowly alternating color effect.<br />
+                    <br/><br/><strong>Hotline Miami features</strong><br/>
+                    • Hotline Miami has a slowly alternating color effect.<br/>
 
-                    <br /><br /><strong>Killing Floor 2 features</strong><br />
-                    • Static red on main menu<br />
-                    • Low Health and death indicators<br />
-                    • Blue flash when healing<br />
-                    • White during zed time<br />
-                    • Red flash on incoming wave<br />
-                    • Fire and Puke indicator flashes<br />
+                    <br/><br/><strong>Killing Floor 2 features</strong><br/>
+                    • Static red on main menu<br/>
+                    • Low Health and death indicators<br/>
+                    • Blue flash when healing<br/>
+                    • White during zed time<br/>
+                    • Red flash on incoming wave<br/>
+                    • Fire and Puke indicator flashes<br/>
 
-                    <br /><br /><strong>League of Legends features</strong><br />
-                    • Teammate pings<br />
-                    • Low health and Damage taken<br />
-                    • Grey on death<br />
+                    <br/><br/><strong>League of Legends features</strong><br/>
+                    • Teammate pings<br/>
+                    • Low health and Damage taken<br/>
+                    • Grey on death<br/>
 
-                    <br /><br /><strong>Minecraft features</strong><br />
-                    • Healthbar<br />
-                    • XP bar<br />
-                    • Armor and hunger bars (not on the default profile but can easily be added)<br />
-                    • Flame effect when player burns<br />
-                    • Raindrops when world is raining<br />
-                    • Background based on time-of-day<br />
+                    <br/><br/><strong>Minecraft features</strong><br/>
+                    • Healthbar<br/>
+                    • XP bar<br/>
+                    • Armor and hunger bars (not on the default profile but can easily be added)<br/>
+                    • Flame effect when player burns<br/>
+                    • Raindrops when world is raining<br/>
+                    • Background based on time-of-day<br/>
 
-                    <br /><br /><strong>Move or Die features</strong><br />
-                    • WASD, TFGH, IJKL and Arrows lighting up with their respective player colors.<br />
-                    • Flash red followed by the player color if a player dies.<br />
-                    • Round winning player colored flashes. <br />
-                    • Match winning player colored pulses.<br />
-                    • Rapid white flashes when leveling up.<br />
-                    • Rapid red flashes while sudden death.<br />
-                    • Synchronized yellow warning flashes idle warning in lobby.<br />
-                    • Colored waves based on the item rarity of the unlocked item.<br />
+                    <br/><br/><strong>Move or Die features</strong><br/>
+                    • WASD, TFGH, IJKL and Arrows lighting up with their respective player colors.<br/>
+                    • Flash red followed by the player color if a player dies.<br/>
+                    • Round winning player colored flashes. <br/>
+                    • Match winning player colored pulses.<br/>
+                    • Rapid white flashes when leveling up.<br/>
+                    • Rapid red flashes while sudden death.<br/>
+                    • Synchronized yellow warning flashes idle warning in lobby.<br/>
+                    • Colored waves based on the item rarity of the unlocked item.<br/>
 
-                    <br /><br /><strong>Osu! features</strong><br />
-                    • Health and accuracy meters<br />
-                    • Animations for missing beats and losing combos<br />
-                    • Animations when you hit a beat<br />
+                    <br/><br/><strong>Osu! features</strong><br/>
+                    • Health and accuracy meters<br/>
+                    • Animations for missing beats and losing combos<br/>
+                    • Animations when you hit a beat<br/>
 
-                    <br /><br /><strong>Overwatch features</strong><br />
-                    • Different color depending on hero<br />
-                    • Ability cooldown indicators<br />
-                    • Ultimate indicator and animation (for certain heroes)<br />
-                    • Lights up keybindings<br />
+                    <br/><br/><strong>Overwatch features</strong><br/>
+                    • Different color depending on hero<br/>
+                    • Ability cooldown indicators<br/>
+                    • Ultimate indicator and animation (for certain heroes)<br/>
+                    • Lights up keybindings<br/>
 
-                    <br /><br /><strong>Payday 2 features</strong><br />
-                    • Assault-based background lighting effects<br />
-                    • Suspicion background effect<br />
-                    • Player health and ammo indicators<br />
+                    <br/><br/><strong>Payday 2 features</strong><br/>
+                    • Assault-based background lighting effects<br/>
+                    • Suspicion background effect<br/>
+                    • Player health and ammo indicators<br/>
 
-                    <br /><br /><strong>Quake Champions features</strong><br />
-                    • Different color depending on chosen champion<br />
-                    • Lights up keybinds with each weapons color <br />
+                    <br/><br/><strong>Quake Champions features</strong><br/>
+                    • Different color depending on chosen champion<br/>
+                    • Lights up keybinds with each weapons color <br/>
 
-                    <br /><br /><strong>Quantum Conumdrum features</strong><br />
-                    • Changes color based on what dimension the player is in<br />
+                    <br/><br/><strong>Quantum Conumdrum features</strong><br/>
+                    • Changes color based on what dimension the player is in<br/>
 
-                    <br /><br /><strong>Rocket League features</strong><br />
-                    • Team-based background lighting<br />
-                    • Score-split for background effect<br />
-                    • Boost indicator<br />
-                    • Goal Explosions<br />
+                    <br/><br/><strong>Rocket League features</strong><br/>
+                    • Team-based background lighting<br/>
+                    • Score-split for background effect<br/>
+                    • Boost indicator<br/>
+                    • Goal Explosions<br/>
 
-                    <br /><br /><strong>Subnautica features</strong><br />
-                    • Depth indicator<br />
-                    • Health, water, oxygen, and hunger indicator<br />
-                    • PDA status<br />
+                    <br/><br/><strong>Subnautica features</strong><br/>
+                    • Depth indicator<br/>
+                    • Health, water, oxygen, and hunger indicator<br/>
+                    • PDA status<br/>
 
-                    <br /><br /><strong>The Division features</strong><br />
-                    • Burn indicators<br />
-                    • Ability cooldowns<br />
-                    • Ammo indicator<br />
-                    • Lights up keybindings<br />
+                    <br/><br/><strong>The Division features</strong><br/>
+                    • Burn indicators<br/>
+                    • Ability cooldowns<br/>
+                    • Ammo indicator<br/>
+                    • Lights up keybindings<br/>
 
-                    <br /><br /><strong>The Talos Principle features</strong><br />
-                    • Changes color based on the puzzle color the player is in<br />
+                    <br/><br/><strong>The Talos Principle features</strong><br/>
+                    • Changes color based on the puzzle color the player is in<br/>
 
-                    <br /><br /><strong>The Witcher 3 features</strong><br />
-                    • Current active sign as background<br />
+                    <br/><br/><strong>The Witcher 3 features</strong><br/>
+                    • Current active sign as background<br/>
                     • Health, Toxicity, and Stamina indicators
 
                 </p>
