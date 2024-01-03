@@ -56,9 +56,13 @@ a {
 .buttonkeygameicon, .buttonkeyrazer, .buttonkeylogitech {
     border: 3px solid #323232;
     border-radius: 10px;
-    width: 150px;
     padding: 10px;
     background: linear-gradient(to bottom, rgb(32, 32, 32) 0%, rgb(8, 8, 8) 40%, rgb(8, 8, 8) 60%, rgb(32, 32, 32) 100%);
+}
+
+.buttonkeygameicon {
+    width:64px;
+    height:64px
 }
 
 .devicelogo {
@@ -178,7 +182,7 @@ a {
     background-color: #717171;
 }
 
-.slideshow-container {
+.slideshow-container img {
     height: 670px;
 }
 
