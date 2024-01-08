@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex,nofollow"/>
+    <title>Aurora Download Stats</title>
+</head>
+<body>
+<h1>Latest Release</h1>
+<h2 id="latestRelease"></h2>
+<span>
+Installer downloads: <div id="latestInstallerDiv"></div>
+Zip downloads: <div id="latestZipDiv"></div>
+</span>
+
+<h1>Last 5 Releases</h1>
+<span id="lastFiveReleasesSpan"></span>
+<script async>
+  fetch("https://api.github.com/repos/Aurora-RGB/Aurora/releases/latest")
+    .then(async res => {
+      if (res.status < 400) {
+        let githubResponse = await res.json();
+        document.getElementById("latestRelease").innerHTML = githubResponse.name;
+        githubResponse.assets.forEach(asset => {
+          if (asset.name.startsWith("Aurora-setup-v")) {
+            document.getElementById("latestInstallerDiv").innerHTML = asset.download_count
+          } else if (asset.name.startsWith("Aurora-v")) {
+            document.getElementById("latestZipDiv").innerHTML = asset.download_count
+          }
+        })
+      }
+    })
+
+  fetch("https://api.github.com/repos/Aurora-RGB/Aurora/releases?per_page=15")
+    .then(async res => {
+      if (res.status < 400) {
+        let githubResponse = await res.json();
+
+        const last5span = document.getElementById("lastFiveReleasesSpan")
+
+        githubResponse.forEach(release => {
+          const releaseName = release.name;
+
+          const elements = release.assets.map(asset => {
+            if (asset.name.startsWith("Aurora-setup-v")) {
+              return "Installer downloads: <div>" + asset.download_count + "</div>"
+            } else if (asset.name.startsWith("Aurora-v")) {
+              return "Zip downloads: <div>" + asset.download_count + "</div>"
+            }
+          }).filter(nodeText => nodeText)
+            .map(nodeText => {
+              let element = document.createElement("div")
+              element.innerHTML = nodeText
+              return element;
+            })
+
+          const header = document.createElement("h2")
+          header.innerHTML = releaseName
+          last5span.appendChild(header)
+          elements.forEach(e => last5span.appendChild(e))
+        })
+      }
+    })
+</script>
+</body>
+</html>
