@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="robots" content="noindex,nofollow"/>
+    <meta name="viewport" content= "width=device-width, initial-scale=1.0">
     <title>Aurora Download Stats</title>
 </head>
 <body>
 <h1>Latest Release</h1>
 <h2 id="latestRelease"></h2>
+<div id="latestReleaseTime"></div>
 <span>
 Installer downloads: <div id="latestInstallerDiv"></div>
 Zip downloads: <div id="latestZipDiv"></div>
@@ -21,6 +23,7 @@ Zip downloads: <div id="latestZipDiv"></div>
       if (res.status < 400) {
         let githubResponse = await res.json();
         document.getElementById("latestRelease").innerHTML = githubResponse.name;
+        document.getElementById("latestReleaseTime").innerHTML = githubResponse.created_at;
         githubResponse.assets.forEach(asset => {
           if (asset.name.startsWith("Aurora-setup-v")) {
             document.getElementById("latestInstallerDiv").innerHTML = asset.download_count
@@ -40,6 +43,7 @@ Zip downloads: <div id="latestZipDiv"></div>
 
         githubResponse.forEach(release => {
           const releaseName = release.name;
+          const time = release.created_at;
 
           const elements = release.assets.map(asset => {
             if (asset.name.startsWith("Aurora-setup-v")) {
@@ -57,6 +61,9 @@ Zip downloads: <div id="latestZipDiv"></div>
           const header = document.createElement("h2")
           header.innerHTML = releaseName
           last5span.appendChild(header)
+          const timeDiv = document.createElement("div")
+          timeDiv.innerHTML = time
+          last5span.appendChild(timeDiv)
           elements.forEach(e => last5span.appendChild(e))
         })
       }
