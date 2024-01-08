@@ -59,7 +59,7 @@ Zip downloads: <div id="latestZipDiv"></div>
             })
 
           const header = document.createElement("h2")
-          header.innerHTML = releaseName
+          header.innerHTML = releaseName + (release.prerelease ? " (Prerelease)" : "")
           last5span.appendChild(header)
           const timeDiv = document.createElement("div")
           timeDiv.innerHTML = time
