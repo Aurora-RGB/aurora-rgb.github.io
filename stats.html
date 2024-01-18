@@ -9,15 +9,15 @@
 </head>
 <body data-bs-theme="dark">
 <h1>Latest Release</h1>
-<h2 id="latestRelease"></h2>
-<div class="text-secondary" id="latestReleaseTime"></div>
-<span>
-Installer downloads: <div id="latestInstallerDiv"></div>
-Zip downloads: <div id="latestZipDiv"></div>
-</span>
+<h2 id="latestRelease">v---</h2>
+<div class="text-secondary" id="latestReleaseTime">0000-00-00T00:00:00Z</div>
+<div>
+Installer downloads: <div id="latestInstallerDiv">*</div>
+Zip downloads: <div id="latestZipDiv">*</div>
+</div>
 
-<h1>Last 5 Releases</h1>
-<span id="lastFiveReleasesSpan"></span>
+<h1>Last 15 Releases</h1>
+<div id="lastFiveReleasesContainer"></div>
 <script async>
   fetch("https://api.github.com/repos/Aurora-RGB/Aurora/releases/latest")
     .then(async res => {
@@ -40,7 +40,7 @@ Zip downloads: <div id="latestZipDiv"></div>
       if (res.status < 400) {
         let githubResponse = await res.json();
 
-        const last5span = document.getElementById("lastFiveReleasesSpan")
+        const last5span = document.getElementById("lastFiveReleasesContainer")
 
         githubResponse.forEach(release => {
           const releaseName = release.name;
@@ -71,5 +71,6 @@ Zip downloads: <div id="latestZipDiv"></div>
       }
     })
 </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
 </html>
