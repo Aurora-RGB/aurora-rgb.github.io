@@ -87,7 +87,6 @@ a {
     -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
 }
 
-
 .content {
     font-family: arial;
 }
@@ -104,13 +103,23 @@ a {
 /* Slideshow container */
 .slideshow-container {
     max-width: 1000px;
+    max-height: 670px;
     position: relative;
     margin: auto;
 }
 
 /* Hide the images by default */
 .mySlides {
+    max-width: 1000px;
     display: none;
+}
+
+.mySlides0 {
+    max-width: 1000px;
+}
+
+.slideshow-container img {
+    max-width: 100%;
 }
 
 /* Next & previous buttons */
@@ -180,10 +189,6 @@ a {
 
 .active, .dot:hover {
     background-color: #717171;
-}
-
-.slideshow-container img {
-    height: 670px;
 }
 
 .keyboard {
