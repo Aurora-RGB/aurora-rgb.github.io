@@ -12,8 +12,8 @@ a {
     bottom: 4px;
     width: inherit;
     height: auto;
-    right: 0px;
-    left: 0px;
+    right: 0;
+    left: 0;
     font-family: arial;
     font-weight: bold;
     color: white;
@@ -30,7 +30,7 @@ a {
     color: #FFFFFF;
     position: relative;
     top: 8px;
-    left: 0px;
+    left: 0;
     display: inline-block;
 }
 
@@ -47,10 +47,14 @@ a {
 
 #logo {
     float: left;
-    width: 0px;
+    width: 0;
     clear: both;
-    margin: 0px 0px 20px 25px;
+    margin: 0 0 20px 25px;
     opacity: 0.35;
+}
+
+#includedContent {
+    min-height: 190px;
 }
 
 .buttonkeygameicon, .buttonkeyrazer, .buttonkeylogitech {
@@ -93,7 +97,15 @@ a {
 
 .auto-style1 {
     text-align: left;
-    padding-left: 20%;
+    width: fit-content;
+}
+
+.features {
+    padding: 2em;
+    margin: 1em 0;
+    background: #000000AA;
+    border-radius: 1em;
+    width: fit-content;
 }
 
 .box-size {
