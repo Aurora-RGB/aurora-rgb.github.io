@@ -241,3 +241,9 @@ lite-youtube {
         opacity: 1
     }
 }
+
+/* disable animations until load */
+.preload * {
+    transition: none !important;
+    animation-duration: 0.001s !important;
+}

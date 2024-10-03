@@ -40,9 +40,13 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-74PP2Q060B');
+
+  window.addEventListener("load", () => {
+      document.body.classList.remove("preload");
+  });
 </script>
 
-<body style="color: #FFFFFF">
+<body style="color: #FFFFFF" class="preload">
     <div id="includedContent"></div>
     <div align="center" class="contentbox">
         <div class="content">
@@ -750,8 +754,8 @@
         </div>
     </div>
 
-    <script onload="onPopcornLoaded();" async type="module" src="jscripts/popcorn.min.js"></script>
     <script async type="module" src="jscripts/lite-yt-embed.js"></script>
+    <script onload="onPopcornLoaded();" async type="module" src="jscripts/popcorn.min.js"></script>
 </body>
 
 </html>
