@@ -194,6 +194,14 @@ a {
     width: 100%;
 }
 
+.keyboard > video {
+    max-width: 95%;
+}
+
+.keyboard > image {
+    opacity: 0.5%;
+}
+
 .demo-container {
     align-items: center;
 }
