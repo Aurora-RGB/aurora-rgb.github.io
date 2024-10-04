@@ -45,18 +45,6 @@ a {
     background-position: center -142px !important;
 }
 
-#logo {
-    float: left;
-    width: 0;
-    clear: both;
-    margin: 0 0 20px 25px;
-    opacity: 0.35;
-}
-
-#includedContent {
-    min-height: 190px;
-}
-
 .buttonkeygameicon, .buttonkeyrazer, .buttonkeylogitech {
     border: 3px solid #323232;
     border-radius: 10px;
@@ -67,28 +55,6 @@ a {
 .buttonkeygameicon {
     width:64px;
     height:64px
-}
-
-.devicelogo {
-    border: 3px solid #323232;
-    border-radius: 10px;
-    padding: 10px;
-    background: rgb(255, 255, 255);
-}
-
-.gamelogo {
-    border: 3px solid #323232;
-    border-radius: 10px;
-    padding: 10px;
-    background: linear-gradient(to bottom, rgb(32, 32, 32) 0%, rgb(8, 8, 8) 40%, rgb(8, 8, 8) 60%, rgb(32, 32, 32) 100%);
-}
-
-.pixelated {
-    image-rendering: -moz-crisp-edges; /* Firefox */
-    image-rendering: -o-crisp-edges; /* Opera */
-    image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
-    image-rendering: crisp-edges;
-    -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
 }
 
 .content {
