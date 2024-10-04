@@ -52,30 +52,30 @@
     <div align="center" class="contentbox">
         <div class="content">
             <h1>Aurora Demo Preview</h1>
-            <div style="display:inline-block;width:600px;height:342px;">
-                <div class="logikey keyboard" style="position:absolute;">
-                    <img width="600" src="images/logi.webp" style="z-index: 1;width: 600px;position: absolute;" alt="Logitech keyboard preview"/>
-                    <video height="170" width="560" id="b" style="padding: 59px 20px 131px;position: absolute;"
-                           muted>
-                        <source src="videos/overwatch_demo_logitech.mp4">
-                    </video>
+            <div class="demo-container">
+                <div class="keyboard-container">
+                    <div class="logikey keyboard">
+                        <video id="b" style="padding: 59px 0 20px 20px;" muted>
+                            <source src="videos/overwatch_demo_logitech.mp4">
+                        </video>
+                        <img src="images/logi.webp" alt="Logitech keyboard preview"/>
+                    </div>
+                    <div class="razrkey keyboard" style="opacity:0">
+                        <video id="c" style="padding: 74px 0 20px 29px" muted>
+                            <source src="videos/overwatch_demo_razer.mp4">
+                        </video>
+                        <img src="images/keyboardr.webp" alt="Razer keyboard preview"/>
+                    </div>
                 </div>
-                <div class="razrkey keyboard" style="opacity:0;position:absolute;">
-                    <img width="600" src="images/keyboardr.webp" style="z-index: 1;width: 600px;position: absolute;" alt="Razer keyboard preview"/>
-                    <video id="c" style="padding: 74px 26px 137px 29px;position: absolute;" muted="" height="150"
-                           width="545">
-                        <source src="videos/overwatch_demo_razer.mp4">
-                    </video>
-                </div>
+                <video id="gameplay" controls loop>
+                    <source src="videos/overwatch_demo_gameplay.mp4">
+                </video>
             </div>
-            <video height="340" width="600" id="a" style="padding-left: 20px;" controls loop>
-                <source src="videos/overwatch_demo_gameplay.mp4">
-            </video>
             <br/>
             <div style="height: 100%;width: 75%;background-color: rgba(0, 0, 0, 0.7);margin-top: 20px;padding-top: 20px;">
                 Click a brand to switch the keyboard:<br/><br/>
-                <img class="buttonkeylogitech keyboard-switch" src="images/ltech.webp" alt="Razer switch" width="276" height="72"/>
-                <img class="buttonkeyrazer keyboard-switch" src="images/rzr.webp" alt="Logitech switch" width="276" height="72"/>
+                <img id="buttonkeylogitech" class="keyboard-switch" src="images/ltech.webp" alt="Razer switch" width="276" height="72"/>
+                <img id="buttonkeyrazer" class="keyboard-switch" src="images/rzr.webp" alt="Logitech switch" width="276" height="72"/>
                 <br/>
                 <br/>
                 Click a game icon to switch demo video:<br/><br/>
@@ -96,7 +96,7 @@
 
                   function onPopcornLoaded() {
                     let videos = {
-                        a: Popcorn("#a"),
+                        a: Popcorn("#gameplay"),
                         b: Popcorn("#b"),
                         c: Popcorn("#c"),
                       },
@@ -167,7 +167,7 @@
 
                     sync();
 
-                    const gameplayVid = document.getElementById("a");
+                    const gameplayVid = document.getElementById("gameplay");
                     const logiVid = document.getElementById("b");
                     const razerVid = document.getElementById("c");
 
@@ -235,9 +235,10 @@
                   }
 
                   document.addEventListener("DOMContentLoaded", function () {
-                    let buttonKeyRazer = document.querySelector("img.buttonkeyrazer");
+                    let buttonKeyRazer = document.querySelector("#buttonkeyrazer");
                     if (buttonKeyRazer) {
                       buttonKeyRazer.addEventListener("click", function () {
+                          console.log('buttonKeyRazer click')
                         var logitech = document.querySelector("div.logikey");
                         var razer = document.querySelector("div.razrkey");
                         if (razer.style.display !== "block") {
@@ -245,9 +246,11 @@
                           fadeOut(logitech);
                         }
                       });
+                    }else{
+                        console.log('buttonKeyRazer not found')
                     }
 
-                    let buttonKeyLogitech = document.querySelector("img.buttonkeylogitech");
+                    let buttonKeyLogitech = document.querySelector("#buttonkeylogitech");
                     if (buttonKeyLogitech) {
                       buttonKeyLogitech.addEventListener("click", function () {
                         var logitech = document.querySelector("div.logikey");
@@ -257,6 +260,8 @@
                           fadeOut(razer);
                         }
                       });
+                    }else{
+                        console.log('buttonKeyLogitech not found')
                     }
                   })
                 </script>
