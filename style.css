@@ -240,6 +240,11 @@ lite-youtube {
     max-width: unset;
 }
 
+.info-panel {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 75%;
+}
+
 @-webkit-keyframes fade {
     from {
         opacity: .4

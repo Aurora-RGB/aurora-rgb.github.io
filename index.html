@@ -90,7 +90,7 @@
                 </video>
             </div>
             <br/>
-            <div style="height: 100%;width: 75%;background-color: rgba(0, 0, 0, 0.7);margin-top: 20px;padding-top: 20px;">
+            <div class="info-panel" style="height: 100%;margin-top: 20px;padding-top: 20px;">
                 Click a brand to switch the keyboard:<br/><br/>
                 <img id="buttonkeylogitech" class="keyboard-switch" src="images/ltech.webp" alt="Razer switch" width="276" height="72"/>
                 <img id="buttonkeyrazer" class="keyboard-switch" src="images/rzr.webp" alt="Logitech switch" width="276" height="72"/>
@@ -285,99 +285,122 @@
                 </script>
             </div>
             <hr style="width: 70%;"/>
-            <h1>Natively Supported Games</h1>
-            <p>
-                <a href="/Docs/basic-topics/games/">All Supported Games,</a> including CS2, Dota 2 and League of Legends.
-            </p>
+            <div class="info-panel">
+                <h1>Natively Supported Games</h1>
+                <p>
+                    <a href="/Docs/basic-topics/games/">All Supported Games,</a> including CS2, Dota 2 and League of Legends.
+                </p>
+            </div>
 
             <hr style="width: 70%;"/>
-            <h1>Natively Supported Brands</h1>
-            <p>
-                Works with <a href="/Docs/devices/alldevices/">All Supported Brands,</a> including Logitech, Razer and Corsair.
-            </p>
+            <div class="info-panel">
+                <h1>Brand Specific Integrations</h1>
+                <p>
+                    Aurora can display some brand specific RGB integrations that are developed with reverse engineering.
+                    <br>
+                    Below is a live demo of Razer Chroma integration with Apex Legends and Logitech Lightsync integration with Battlefield 2042
+                </p>
+                <div class="box-size">
+                    <lite-youtube videoid="BTn97nW_6qM" style="background-image: url('https://i.ytimg.com/vi_webp/BTn97nW_6qM/sddefault.webp')">
+                        <a href="https://youtube.com/watch?v=BTn97nW_6qM" class="lty-playbtn" title="Play Video"></a>
+                    </lite-youtube>
+                </div>
+            </div>
 
             <hr style="width: 70%;"/>
-            <h1>Supported Device Types</h1>
-            <ul class="auto-style1">
-                <li>RGB Keyboards</li>
-                <li>RGB Mice</li>
-                <li>RGB Mousepad</li>
-                <li>WiFi Lights (like Nanoleaf, Phillips Hue, Yeelight)</li>
-                <li>RGB Fans</li>
-            </ul>
+            <div class="info-panel">
+                <h1>Natively Supported Brands</h1>
+                <p>
+                    Works with <a href="/Docs/devices/alldevices/">All Supported Brands,</a> including Logitech, Razer and Corsair.
+                </p>
+            </div>
+
+            <hr style="width: 70%;"/>
+            <div class="info-panel">
+                <h1>Supported Device Types</h1>
+                <ul class="auto-style1">
+                    <li>RGB Keyboards</li>
+                    <li>RGB Mice</li>
+                    <li>RGB Mousepad</li>
+                    <li>WiFi Lights (like Nanoleaf, Phillips Hue, Yeelight)</li>
+                    <li>RGB Fans</li>
+                </ul>
+            </div>
 
             <hr style="width:70%;"/>
-            <h1>Screenshots</h1>
-            <div class="slideshow-container box-size">
+            <div class="info-panel">
+                <h1>Screenshots</h1>
+                <div class="slideshow-container box-size">
 
-                <div class="mySlides0 fade">
-                    <div class="numbertext">1 / 11</div>
-                    <img src="images/Screenshots/Zoetato2.webp" alt="Screenshot 1">
-                    <div class="text">Desktop (Zoetato)</div>
+                    <div class="mySlides0 fade">
+                        <div class="numbertext">1 / 11</div>
+                        <img src="images/Screenshots/Zoetato2.webp" alt="Screenshot 1">
+                        <div class="text">Desktop (Zoetato)</div>
+                    </div>
+
+                    <div class="mySlides0 fade">
+                        <div class="numbertext">2 / 11</div>
+                        <img src="images/Screenshots/DrMeteor1.webp" alt="Screenshot 2" loading="lazy">
+                        <div class="text">Layer Overrides (DrMeteor)</div>
+                    </div>
+
+                    <div class="mySlides0 fade">
+                        <div class="numbertext">3 / 11</div>
+                        <img src="images/Screenshots/Davato1.webp" alt="Screenshot 3" loading="lazy">
+                        <div class="text">Key Wave (Davato)</div>
+                    </div>
+
+                    <div class="mySlides0 fade">
+                        <div class="numbertext">4 / 11</div>
+                        <img src="images/Screenshots/macer1.webp" alt="Screenshot 4" loading="lazy">
+                        <div class="text">Audio Visualiser (gitmacer)</div>
+                    </div>
+
+                    <div class="mySlides0 fade">
+                        <div class="numbertext">5 / 11</div>
+                        <img src="images/Screenshots/Zoetato4.webp" alt="Screenshot 5" loading="lazy">
+                        <div class="text">Layer Overrides (Zoetato)</div>
+                    </div>
+
+                    <div class="mySlides0 fade">
+                        <div class="numbertext">6 / 11</div>
+                        <img src="images/Screenshots/Zoetato3.webp" alt="Screenshot 6" loading="lazy">
+                        <div class="text">Excluding Keys (Zoetato)</div>
+                    </div>
+
+                    <div class="mySlides0 fade">
+                        <div class="numbertext">7 / 11</div>
+                        <img src="images/Screenshots/DrMeteor2.webp" alt="Screenshot 7" loading="lazy">
+                        <div class="text">Toggle key layer (DrMeteor)</div>
+                    </div>
+
+                    <div class="mySlides0 fade">
+                        <div class="numbertext">8 / 11</div>
+                        <img src="images/Screenshots/Davato2.webp" alt="Screenshot 8" loading="lazy">
+                        <div class="text">Audio Visualiser (Davato)</div>
+                    </div>
+
+                    <div class="mySlides0 fade">
+                        <div class="numbertext">9 / 11</div>
+                        <img src="images/Screenshots/macer2.webp" alt="Screenshot 9" loading="lazy">
+                        <div class="text">Excluding Keys (gitmacer)</div>
+                    </div>
+
+                    <div class="mySlides0 fade">
+                        <div class="numbertext">10 / 11</div>
+                        <img src="images/Screenshots/Davato3.webp" alt="Screenshot 10" loading="lazy">
+                        <div class="text">Layer Overrides (Davato)</div>
+                    </div>
+
+                    <div class="mySlides0 fade">
+                        <div class="numbertext">11 / 11</div>
+                        <img src="images/Screenshots/Zoetato1.webp" alt="Screenshot 11" loading="lazy">
+                        <div class="text">Key Fade (Zoetato)</div>
+                    </div>
+
+                    <span class="prev" onclick="plusSlides(0, -1)">&#10094;</span>
+                    <span class="next" onclick="plusSlides(0, 1)">&#10095;</span>
                 </div>
-
-                <div class="mySlides0 fade">
-                    <div class="numbertext">2 / 11</div>
-                    <img src="images/Screenshots/DrMeteor1.webp" alt="Screenshot 2" loading="lazy">
-                    <div class="text">Layer Overrides (DrMeteor)</div>
-                </div>
-
-                <div class="mySlides0 fade">
-                    <div class="numbertext">3 / 11</div>
-                    <img src="images/Screenshots/Davato1.webp" alt="Screenshot 3" loading="lazy">
-                    <div class="text">Key Wave (Davato)</div>
-                </div>
-
-                <div class="mySlides0 fade">
-                    <div class="numbertext">4 / 11</div>
-                    <img src="images/Screenshots/macer1.webp" alt="Screenshot 4" loading="lazy">
-                    <div class="text">Audio Visualiser (gitmacer)</div>
-                </div>
-
-                <div class="mySlides0 fade">
-                    <div class="numbertext">5 / 11</div>
-                    <img src="images/Screenshots/Zoetato4.webp" alt="Screenshot 5" loading="lazy">
-                    <div class="text">Layer Overrides (Zoetato)</div>
-                </div>
-
-                <div class="mySlides0 fade">
-                    <div class="numbertext">6 / 11</div>
-                    <img src="images/Screenshots/Zoetato3.webp" alt="Screenshot 6" loading="lazy">
-                    <div class="text">Excluding Keys (Zoetato)</div>
-                </div>
-
-                <div class="mySlides0 fade">
-                    <div class="numbertext">7 / 11</div>
-                    <img src="images/Screenshots/DrMeteor2.webp" alt="Screenshot 7" loading="lazy">
-                    <div class="text">Toggle key layer (DrMeteor)</div>
-                </div>
-
-                <div class="mySlides0 fade">
-                    <div class="numbertext">8 / 11</div>
-                    <img src="images/Screenshots/Davato2.webp" alt="Screenshot 8" loading="lazy">
-                    <div class="text">Audio Visualiser (Davato)</div>
-                </div>
-
-                <div class="mySlides0 fade">
-                    <div class="numbertext">9 / 11</div>
-                    <img src="images/Screenshots/macer2.webp" alt="Screenshot 9" loading="lazy">
-                    <div class="text">Excluding Keys (gitmacer)</div>
-                </div>
-
-                <div class="mySlides0 fade">
-                    <div class="numbertext">10 / 11</div>
-                    <img src="images/Screenshots/Davato3.webp" alt="Screenshot 10" loading="lazy">
-                    <div class="text">Layer Overrides (Davato)</div>
-                </div>
-
-                <div class="mySlides0 fade">
-                    <div class="numbertext">11 / 11</div>
-                    <img src="images/Screenshots/Zoetato1.webp" alt="Screenshot 11" loading="lazy">
-                    <div class="text">Key Fade (Zoetato)</div>
-                </div>
-
-                <span class="prev" onclick="plusSlides(0, -1)">&#10094;</span>
-                <span class="next" onclick="plusSlides(0, 1)">&#10095;</span>
             </div>
             <br>
 
@@ -396,63 +419,65 @@
             </div>
 
             <hr style="width:70%;"/>
-            <h1>Video Demos</h1>
-            <div class="slideshow-container box-size">
+            <div class="info-panel">
+                <h1>Video Demos</h1>
+                <div class="slideshow-container box-size">
 
-                <div class="mySlides1 fade">
-                    <div class="numbertext">1 / 6</div>
-                    <lite-youtube videoid="irBmmA_ndPY" style="background-image: url('https://i.ytimg.com/vi_webp/irBmmA_ndPY/sddefault.webp')">
-                        <a href="https://youtube.com/watch?v=irBmmA_ndPY" class="lty-playbtn" title="Play Video"></a>
-                    </lite-youtube>
+                    <div class="mySlides1 fade">
+                        <div class="numbertext">1 / 6</div>
+                        <lite-youtube videoid="irBmmA_ndPY" style="background-image: url('https://i.ytimg.com/vi_webp/irBmmA_ndPY/sddefault.webp')">
+                            <a href="https://youtube.com/watch?v=irBmmA_ndPY" class="lty-playbtn" title="Play Video"></a>
+                        </lite-youtube>
+                    </div>
+
+                    <div class="mySlides1 fade">
+                        <div class="numbertext">2 / 6</div>
+                        <lite-youtube videoid="YMk0NwrLMF4" style="background-image: url('https://i.ytimg.com/vi_webp/YMk0NwrLMF4/sddefault.webp');height: 500px;">
+                            <a href="https://youtube.com/watch?v=YMk0NwrLMF4" class="lty-playbtn" title="Play Video"></a>
+                        </lite-youtube>
+                    </div>
+
+                    <div class="mySlides1 fade">
+                        <div class="numbertext">3 / 6</div>
+                        <lite-youtube videoid="iqwYU-blkhk" style="background-image: url('https://i.ytimg.com/vi_webp/iqwYU-blkhk/sddefault.webp');height: 500px;">
+                            <a href="https://youtube.com/watch?v=iqwYU-blkhk" class="lty-playbtn" title="Play Video"></a>
+                        </lite-youtube>
+                    </div>
+
+                    <div class="mySlides1 fade">
+                        <div class="numbertext">4 / 6</div>
+                        <lite-youtube videoid="8Y2hvVDQTxI" style="background-image: url('https://i.ytimg.com/vi_webp/8Y2hvVDQTxI/sddefault.webp');height: 500px;">
+                            <a href="https://youtube.com/watch?v=8Y2hvVDQTxI" class="lty-playbtn" title="Play Video"></a>
+                        </lite-youtube>
+                    </div>
+
+                    <div class="mySlides1 fade">
+                        <div class="numbertext">5 / 6</div>
+                        <lite-youtube videoid="pxx3hqoPFD8" style="background-image: url('https://i.ytimg.com/vi_webp/pxx3hqoPFD8/sddefault.webp');height: 500px;">
+                            <a href="https://youtube.com/watch?v=pxx3hqoPFD8" class="lty-playbtn" title="Play Video"></a>
+                        </lite-youtube>
+                    </div>
+
+                    <div class="mySlides1 fade">
+                        <div class="numbertext">6 / 6</div>
+                        <lite-youtube videoid="XhXQt0LU520" style="background-image: url('https://i.ytimg.com/vi_webp/XhXQt0LU520/sddefault.webp');height: 500px;">
+                            <a href="https://youtube.com/watch?v=XhXQt0LU520" class="lty-playbtn" title="Play Video"></a>
+                        </lite-youtube>
+                    </div>
+
+                    <span class="prev" onclick="plusSlides(1, -1)">&#10094;</span>
+                    <span class="next" onclick="plusSlides(1, 1)">&#10095;</span>
                 </div>
+                <br>
 
-                <div class="mySlides1 fade">
-                    <div class="numbertext">2 / 6</div>
-                    <lite-youtube videoid="YMk0NwrLMF4" style="background-image: url('https://i.ytimg.com/vi_webp/YMk0NwrLMF4/sddefault.webp');height: 500px;">
-                        <a href="https://youtube.com/watch?v=YMk0NwrLMF4" class="lty-playbtn" title="Play Video"></a>
-                    </lite-youtube>
+                <div style="text-align:center">
+                    <span class="dot dot1" onclick="currentSlide(1, 1)"></span>
+                    <span class="dot dot1" onclick="currentSlide(1, 2)"></span>
+                    <span class="dot dot1" onclick="currentSlide(1, 3)"></span>
+                    <span class="dot dot1" onclick="currentSlide(1, 4)"></span>
+                    <span class="dot dot1" onclick="currentSlide(1, 5)"></span>
+                    <span class="dot dot1" onclick="currentSlide(1, 6)"></span>
                 </div>
-
-                <div class="mySlides1 fade">
-                    <div class="numbertext">3 / 6</div>
-                    <lite-youtube videoid="iqwYU-blkhk" style="background-image: url('https://i.ytimg.com/vi_webp/iqwYU-blkhk/sddefault.webp');height: 500px;">
-                        <a href="https://youtube.com/watch?v=iqwYU-blkhk" class="lty-playbtn" title="Play Video"></a>
-                    </lite-youtube>
-                </div>
-
-                <div class="mySlides1 fade">
-                    <div class="numbertext">4 / 6</div>
-                    <lite-youtube videoid="8Y2hvVDQTxI" style="background-image: url('https://i.ytimg.com/vi_webp/8Y2hvVDQTxI/sddefault.webp');height: 500px;">
-                        <a href="https://youtube.com/watch?v=8Y2hvVDQTxI" class="lty-playbtn" title="Play Video"></a>
-                    </lite-youtube>
-                </div>
-
-                <div class="mySlides1 fade">
-                    <div class="numbertext">5 / 6</div>
-                    <lite-youtube videoid="pxx3hqoPFD8" style="background-image: url('https://i.ytimg.com/vi_webp/pxx3hqoPFD8/sddefault.webp');height: 500px;">
-                        <a href="https://youtube.com/watch?v=pxx3hqoPFD8" class="lty-playbtn" title="Play Video"></a>
-                    </lite-youtube>
-                </div>
-
-                <div class="mySlides1 fade">
-                    <div class="numbertext">6 / 6</div>
-                    <lite-youtube videoid="XhXQt0LU520" style="background-image: url('https://i.ytimg.com/vi_webp/XhXQt0LU520/sddefault.webp');height: 500px;">
-                        <a href="https://youtube.com/watch?v=XhXQt0LU520" class="lty-playbtn" title="Play Video"></a>
-                    </lite-youtube>
-                </div>
-
-                <span class="prev" onclick="plusSlides(1, -1)">&#10094;</span>
-                <span class="next" onclick="plusSlides(1, 1)">&#10095;</span>
-            </div>
-            <br>
-
-            <div style="text-align:center">
-                <span class="dot dot1" onclick="currentSlide(1, 1)"></span>
-                <span class="dot dot1" onclick="currentSlide(1, 2)"></span>
-                <span class="dot dot1" onclick="currentSlide(1, 3)"></span>
-                <span class="dot dot1" onclick="currentSlide(1, 4)"></span>
-                <span class="dot dot1" onclick="currentSlide(1, 5)"></span>
-                <span class="dot dot1" onclick="currentSlide(1, 6)"></span>
             </div>
             <script>
               var slideIndex = [1, 1];
