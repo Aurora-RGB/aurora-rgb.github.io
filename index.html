@@ -21,9 +21,27 @@
     <meta name="google-site-verification" content="avmRsumfXhE_k-pT4-zNet3t0kEXgf9eypg__t3jBQM" />
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2151914442626247" crossorigin="anonymous"></script>
     <script>
+        let onPageLoaded;
+        const pageLoaded = new Promise((resolve) =>{
+            onPageLoaded = resolve;
+        })
+        let onPopcornLoaded;
+        const popcornLoaded = new Promise((resolve) =>{
+            onPopcornLoaded = resolve;
+        })
+        let onPopcornLoaded2;
+        const popcornLoaded2 = new Promise((resolve) =>{
+            onPopcornLoaded2 = resolve;
+        })
+        let onYtliteLoaded;
+        const ytliteLoaded = new Promise((resolve) =>{
+            onYtliteLoaded = resolve;
+        })
+
         window.addEventListener("load", () => {
-            document.body.classList.remove("preload");
+            onPageLoaded()
         });
+
         <!-- Google tag (gtag.js) -->
         function gtagLoaded() {
             window.dataLayer = window.dataLayer || [];
@@ -31,6 +49,10 @@
             gtag('js', new Date());
             gtag('config', 'G-74PP2Q060B');
         }
+    </script>
+    <script type="module">
+        await Promise.all([pageLoaded, popcornLoaded, popcornLoaded2, ytliteLoaded])
+        document.body.classList.remove("preload");
     </script>
     <script async onload="gtagLoaded()" src="https://www.googletagmanager.com/gtag/js?id=G-74PP2Q060B"></script>
 </head>
@@ -118,7 +140,7 @@
                     element.style.opacity = 0;
                   }
 
-                  function onPopcornLoaded() {
+                  function initializePopcorn() {
                     let videos = {
                         a: Popcorn("#gameplay"),
                         b: Popcorn("#b"),
@@ -252,6 +274,8 @@
                         }
                       })
                     })
+
+                    onPopcornLoaded()
                   }
 
                   document.addEventListener("DOMContentLoaded", function () {
@@ -283,6 +307,7 @@
                     }else{
                         console.log('buttonKeyLogitech not found')
                     }
+                    onPopcornLoaded2()
                   })
                 </script>
             </div>
@@ -752,8 +777,8 @@
         </div>
     </div>
 
-    <script async type="module" src="jscripts/lite-yt-embed.js"></script>
-    <script onload="onPopcornLoaded();" async type="module" src="jscripts/popcorn.min.js"></script>
+    <script async type="module" onload="onYtliteLoaded()" src="jscripts/lite-yt-embed.js"></script>
+    <script onload="initializePopcorn();" async type="module" src="jscripts/popcorn.min.js"></script>
 </body>
 
 </html>
