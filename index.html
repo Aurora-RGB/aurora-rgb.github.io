@@ -41,11 +41,20 @@
         window.addEventListener("load", () => {
             onPageLoaded()
         });
+
+        <!-- Google tag (gtag.js) -->
+        function gtagLoaded() {
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-74PP2Q060B');
+        }
     </script>
     <script type="module">
         await Promise.all([pageLoaded, popcornLoaded, popcornLoaded2, ytliteLoaded])
         document.body.classList.remove("preload");
     </script>
+    <script async onload="gtagLoaded()" src="https://www.googletagmanager.com/gtag/js?id=G-74PP2Q060B"></script>
     <script type="application/ld+json">
         {
             "@context": "https://schema.org/",
