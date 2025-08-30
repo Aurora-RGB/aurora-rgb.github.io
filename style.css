@@ -91,6 +91,16 @@ a {
     box-sizing: border-box
 }
 
+.image-container {
+    max-width: 100vw;
+}
+
+.image-container img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
 /* Slideshow container */
 .slideshow-container {
     max-width: 1000px;
@@ -221,6 +231,12 @@ a {
 
 #gameplay {
     max-width: 600px;
+}
+
+@media (max-width: 600px) {
+    #gameplay {
+        max-width: 100vw;
+    }
 }
 
 .keyboard-switch {
