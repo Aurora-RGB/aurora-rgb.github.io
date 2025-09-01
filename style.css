@@ -230,7 +230,8 @@ a {
 }
 
 #gameplay {
-    max-width: 600px;
+    width: 600px;
+    max-width: 100vh;
 }
 
 @media (max-width: 600px) {
