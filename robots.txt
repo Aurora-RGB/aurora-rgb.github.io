@@ -1,0 +1,8 @@
+# robots.txt for https://www.project-aurora.com/
+# Allow all crawlers and LLMs to index and parse this site,
+# as long as the site is specified as a source.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.project-aurora.com/sitemap-index.xml
